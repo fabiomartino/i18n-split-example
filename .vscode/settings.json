@@ -1,0 +1,49 @@
+{
+  "html.format.endWithNewline": true,
+  "files.insertFinalNewline": true,
+  "editor.showFoldingControls": "always",
+  // Prettify on save
+  "editor.formatOnSave": true,
+  // prettier uses 2 spaces instead of 4
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [
+    120,
+    140
+  ],
+  "editor.matchBrackets": "always",
+  "editor.occurrencesHighlight": true,
+  "editor.highlightActiveIndentGuide": false,
+  // organize imports on save
+  // "editor.codeActionsOnSave": {
+  //  "source.organizeImports": true
+  // },
+  // Uses the project specific typescript version.
+  // "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "files.exclude": {
+    "**/node_modules": {},
+    "**/*.map": {},
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "typings": true,
+    "node_modules": true,
+    ".history": true,
+    ".vscode": true // this excludes the folder
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/documentation": true
+  }
+}
