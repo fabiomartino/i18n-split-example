@@ -6,12 +6,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 
-export function createTranslateLoader(http: HttpClient): any {
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/contact/', '.json');
 }
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ ContactComponent ],
   imports: [
     CommonModule,
     ContactRoutingModule,
@@ -19,10 +19,10 @@ export function createTranslateLoader(http: HttpClient): any {
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
+        deps: [ HttpClient ]
       },
       isolate: true
     })
   ]
 })
-export class ContactModule {}
+export class ContactModule { }

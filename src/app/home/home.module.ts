@@ -6,12 +6,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-export function createTranslateLoader(http: HttpClient): any {
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
 }
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [ HomeComponent ],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -19,10 +19,10 @@ export function createTranslateLoader(http: HttpClient): any {
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
+        deps: [ HttpClient ]
       },
       isolate: true
     })
   ]
 })
-export class HomeModule {}
+export class HomeModule { }
